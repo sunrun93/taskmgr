@@ -2,30 +2,29 @@ import { NgModule, SkipSelf, Optional } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
-import { MatIconModule, MatButtonModule, MatSidenavModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import { loadSVGResource } from '../utils/svg.util';
+import { SharedModule} from '../shared/shared.module';
 
 @NgModule({
   imports: [
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatSidenavModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule,
+    BrowserAnimationsModule
   ],
-  declarations: [HeaderComponent, FooterComponent, SideBarComponent],
+  declarations: [
+    HeaderComponent, 
+    FooterComponent, 
+    SideBarComponent
+  ],
   exports: [
     HeaderComponent, 
     FooterComponent, 
     SideBarComponent,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatIconModule
-
+    SharedModule
   ]
 })
 export class CoreModule {
