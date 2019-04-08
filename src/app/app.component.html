@@ -1,11 +1,11 @@
-<mat-sidenav-container>
+<mat-sidenav-container [class.unicorn-dark-theme]='darkMode'>
     <mat-sidenav #sidenav mode='over'>
       <app-side-bar></app-side-bar>
     </mat-sidenav>
 
   <div class='site'>
     <header>
-        <app-header (toggleNavBar)="sidenav.toggle()"></app-header>
+        <app-header (toggleNavBar)="sidenav.toggle()" (toggleThemeMode)='toggleThemeMode($event)'></app-header>
     </header>
     <main>
       <router-outlet></router-outlet>
