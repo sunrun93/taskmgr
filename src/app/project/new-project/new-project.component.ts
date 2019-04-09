@@ -9,10 +9,16 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 export class NewProjectComponent implements OnInit {
 
 
-  constructor(@Inject(MAT_DIALOG_DATA)private data) { }
+  constructor(
+    @Inject(MAT_DIALOG_DATA)private data,
+    private dialogRef:MatDialogRef<NewProjectComponent>) { }
 
   ngOnInit() {
     console.log(this.data);
+  }
+
+  onClosed(){
+    this.dialogRef.close('i have been closed');
   }
 
 
