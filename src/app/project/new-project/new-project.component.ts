@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-new-project',
@@ -11,10 +12,15 @@ export class NewProjectComponent implements OnInit {
 
   constructor(
     @Inject(MAT_DIALOG_DATA)private data,
-    private dialogRef:MatDialogRef<NewProjectComponent>) { }
+    private dialogRef:MatDialogRef<NewProjectComponent>,
+    private overlayContainer: OverlayContainer) { }
 
   ngOnInit() {
     console.log(this.data);
+    let darkMode = this.data.darkMode;
+    if(darkMode){
+      this.overlayContainer.getContainerElement().classList.add('unicorn-dark-theme');
+    }
   }
 
   onClosed(){

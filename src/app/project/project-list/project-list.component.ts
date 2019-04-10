@@ -27,7 +27,7 @@ export class ProjectListComponent implements OnInit {
   }
 
   openNewDialog(){
-    const dialog = this.dialog.open(NewProjectComponent,{data:{ dark: true }});
+    const dialog = this.dialog.open(NewProjectComponent,{data:{ darkMode: true }});
     dialog.afterClosed().subscribe(res=>{console.log(res)});
   }
 
