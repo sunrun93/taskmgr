@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./invite.component.scss']
 })
 export class InviteComponent implements OnInit {
+  items = [
+    { name: '张三', id: 1 },
+    { name: '李四', id: 1 },
+    { name: '王五', id: 1 }
+  ];
 
   constructor() { }
 

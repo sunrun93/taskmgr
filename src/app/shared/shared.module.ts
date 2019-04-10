@@ -10,7 +10,8 @@ import {
   MatListModule,
   MatSlideToggleModule,
   MatGridListModule,
-  MatDialogModule
+  MatDialogModule,
+  MatAutocompleteModule
  } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
@@ -26,7 +27,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatListModule,
     MatSlideToggleModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatAutocompleteModule
   ],
   exports:[
     CommonModule,
@@ -40,7 +42,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatListModule,
     MatSlideToggleModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatAutocompleteModule
   ],
   declarations: []
 })
