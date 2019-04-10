@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   darkMode = false;
 
+  constructor(private oc: OverlayContainer){
+
+  }
   toggleThemeMode(event){
     this.darkMode = event;
+    if(this.darkMode){
+      this.oc.getContainerElement().classList.add('unicorn-dark-theme');
+    }
   }
 }
