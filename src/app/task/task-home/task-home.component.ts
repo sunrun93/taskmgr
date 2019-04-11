@@ -15,22 +15,28 @@ export class TaskHomeComponent implements OnInit {
         {
           id:1,
           desc:'这是第一个任务',
+          completed:true,
           owner:{
             id:1,
             name:'张三',
             avatar:'avatars:svg-11'
           },
-          dueDate: new Date()
+          dueDate: new Date(),
+          remainder:true,
+          priority:1
         },
         {
           id:2,
           desc:'这是第二个任务',
+          completed:false,
           owner:{
             id:1,
             name:'李四',
             avatar:'avatars:svg-12'
           },
-          dueDate: new Date()
+          dueDate: new Date(),
+          remainder:true,
+          priority:2
         }
       ]
     },
@@ -41,27 +47,33 @@ export class TaskHomeComponent implements OnInit {
         {
           id:3,
           desc:'这是第三个任务',
+          completed:false,
           owner:{
             id:1,
             name:'王五',
             avatar:'avatars:svg-13'
           },
-          dueDate: new Date()
+          dueDate: new Date(),
+          remainder:false,
+          priority:3
         },
         {
           id:4,
           desc:'这是第四个任务',
+          completed:true,
           owner:{
             id:1,
             name:'毛毛',
             avatar:'avatars:svg-14'
           },
-          dueDate: new Date()
+          dueDate: new Date(),
+          remainder:true,
+          priority:1
         }
       ]
     }
   ];
-  
+
   constructor() { }
 
   ngOnInit() {

@@ -12,7 +12,9 @@ import {
   MatGridListModule,
   MatDialogModule,
   MatAutocompleteModule,
-  MatMenuModule
+  MatMenuModule,
+  MatCheckboxModule,
+  MatTooltipModule
  } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
@@ -30,7 +32,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatGridListModule,
     MatDialogModule,
     MatAutocompleteModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCheckboxModule,
+    MatTooltipModule
   ],
   exports:[
     CommonModule,
@@ -46,7 +50,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatGridListModule,
     MatDialogModule,
     MatAutocompleteModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCheckboxModule,
+    MatTooltipModule
   ],
   declarations: []
 })
