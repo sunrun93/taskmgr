@@ -2,7 +2,11 @@
   <h3>移动本列表所有任务</h3>
   <div mat-dialog-content>
     <mat-form-field class='full-width'>
-      <input matInput type="text" placeholder="任务内容">
+      <mat-select placeholder="选择项目">
+        <mat-option *ngFor="let list of lists" [value]="list.name">
+          {{list.name}}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
   </div>
   <div mat-dialog-actions>

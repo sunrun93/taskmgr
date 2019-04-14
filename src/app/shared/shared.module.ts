@@ -17,7 +17,8 @@ import {
   MatTooltipModule,
   MatRadioModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatSelectModule
  } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
@@ -40,7 +41,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatTooltipModule,
     MatRadioModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatSelectModule
   ],
   exports:[
     CommonModule,
@@ -61,7 +63,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatTooltipModule,
     MatRadioModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatSelectModule
   ],
   declarations: []
 })
