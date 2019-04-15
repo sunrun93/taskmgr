@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-task-item',
@@ -7,12 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TaskItemComponent implements OnInit {
   @Input() task;
+  @Output() editTask:EventEmitter<any> = new EventEmitter();;
   avatar = '';
 
   constructor() { }
 
   ngOnInit() {
     this.avatar = this.task.owner ? this.task.owner.avatar : 'unassigned';
+  }
+
+  onEditClick(){
+    this.editTask.emit();
   }
 
 }

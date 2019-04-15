@@ -4,7 +4,10 @@
    [header] = 'list.name' 
    (newTask)="openNewTaskDialog()"
    (moveTask)="openCopyTaskDialog()"></app-task-header>
-   <app-task-item *ngFor="let task of list.task" [task]="task">
+   <app-task-item 
+    *ngFor="let task of list.task"
+    (editTask) = 'onEditTaskClick()'
+    [task]="task">
    </app-task-item>
  </app-task-list>
 </div>

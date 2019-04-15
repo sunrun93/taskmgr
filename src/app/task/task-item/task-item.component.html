@@ -1,4 +1,4 @@
-<mat-list-item class='container'
+<mat-list-item class='container' (click)='onEditClick()'
 [ngClass]="{
   'priority-emergency':task.priority === 1,
   'priority-important':task.priority === 2,
