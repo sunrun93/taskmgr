@@ -3,7 +3,7 @@
   'priority-emergency':task.priority === 1,
   'priority-important':task.priority === 2,
   'priority-normal':task.priority === 3 }">
-  <mat-checkbox [checked]="task.completed" class='complete-status'></mat-checkbox>
+  <mat-checkbox [checked]="task.completed" class='complete-status'(click)='onCheckboxClick($event)'></mat-checkbox>
   <div [matTooltip]="desc" mat-line class='content' [ngClass]="{'completed':task.completed}">
     {{task.desc}}
   </div>

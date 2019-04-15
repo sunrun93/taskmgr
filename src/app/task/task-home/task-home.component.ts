@@ -90,8 +90,8 @@ export class TaskHomeComponent implements OnInit {
     const dialog = this.dialog.open(CopyTaskComponent,{data:{'lists': this.lists}})
   }
 
-  onEditTaskClick(){
-    const dialog = this.dialog.open(NewTaskComponent,{data:{'title': '更新任务'}});
+  onEditTaskClick(task){
+    const dialog = this.dialog.open(NewTaskComponent,{data:{'title': '更新任务','task':task}});
   }
 
 }

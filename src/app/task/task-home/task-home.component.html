@@ -6,7 +6,7 @@
    (moveTask)="openCopyTaskDialog()"></app-task-header>
    <app-task-item 
     *ngFor="let task of list.task"
-    (editTask) = 'onEditTaskClick()'
+    (editTask) = 'onEditTaskClick($event)'
     [task]="task">
    </app-task-item>
  </app-task-list>

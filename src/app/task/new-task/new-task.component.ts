@@ -28,6 +28,10 @@ export class NewTaskComponent implements OnInit {
 
   ngOnInit() {
     this.title = this.data.title;
+    console.log(this.data.task);
   }
 
+  onClosed(){
+    this.dialogRef.close();
+  }
 }

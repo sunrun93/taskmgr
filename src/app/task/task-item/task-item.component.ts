@@ -17,7 +17,11 @@ export class TaskItemComponent implements OnInit {
   }
 
   onEditClick(){
-    this.editTask.emit();
+    this.editTask.emit(this.task);
+  }
+
+  onCheckboxClick(ev:Event){
+    ev.stopPropagation();
   }
 
 }
