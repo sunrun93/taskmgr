@@ -83,7 +83,7 @@ export class TaskHomeComponent implements OnInit {
   }
 
   openNewTaskDialog(){
-    this.dialog.open(NewTaskComponent);
+    const dialog = this.dialog.open(NewTaskComponent,{data:{'title': '新建任务'}});
   }
 
   openCopyTaskDialog(){
@@ -91,7 +91,7 @@ export class TaskHomeComponent implements OnInit {
   }
 
   onEditTaskClick(){
-    const dialog = this.dialog.open(NewTaskComponent);
+    const dialog = this.dialog.open(NewTaskComponent,{data:{'title': '更新任务'}});
   }
 
 }

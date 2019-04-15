@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-new-task',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-task.component.scss']
 })
 export class NewTaskComponent implements OnInit {
+  title: string;
   priorities = [
     {
       label:'紧急',
@@ -20,9 +22,12 @@ export class NewTaskComponent implements OnInit {
       value:3
     }
   ]
-  constructor() { }
+  constructor(
+    @Inject(MAT_DIALOG_DATA)private data,
+    private dialogRef: MatDialogRef<NewTaskComponent>) { }
 
   ngOnInit() {
+    this.title = this.data.title;
   }
 
 }
