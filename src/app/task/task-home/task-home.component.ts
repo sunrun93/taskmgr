@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewTaskComponent } from '../new-task/new-task.component';
 import { CopyTaskComponent } from '../copy-task/copy-task.component';
+import { NewTaskListComponent } from '../new-task-list/new-task-list.component';
+import { ConfirmDialogComponent } from 'src/app/shared/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-task-home',
@@ -92,6 +94,19 @@ export class TaskHomeComponent implements OnInit {
 
   onEditTaskClick(task){
     const dialog = this.dialog.open(NewTaskComponent,{data:{'title': '更新任务','task':task}});
+  }
+
+  onEditTaskListClick(){
+    const dialog = this.dialog.open(NewTaskListComponent,{data:{'title': '新建项目列表'}});
+  }
+
+  onTaskListUpdateClick(){
+    const dialog = this.dialog.open(NewTaskListComponent,{data:{'title': '修改列表名称'}});
+  }
+
+  onTaskListDeleteClick(){
+    const dialog = this.dialog.open(ConfirmDialogComponent,{data:{'title': '确认删除','content':'您是否确认删除该列表？'}});
+    dialog.afterClosed().subscribe(res=>{console.log(res)});
   }
 
 }

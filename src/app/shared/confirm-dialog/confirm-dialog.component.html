@@ -1,0 +1,10 @@
+<form action="">
+  <h3>{{title}}</h3>
+  <div mat-dialog-content>
+      {{content}}
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button type='button' (click)='onClosed(true)' color='primary'>保存</button>
+    <button mat-button mat-dialog-close type='button' (click)='onClosed(false)'>关闭</button>
+  </div>
+</form>
