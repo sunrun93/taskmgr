@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import { loadSVGResource } from '../utils/svg.util';
 import { SharedModule} from '../shared/shared.module';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   imports: [
     HttpClientModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   declarations: [
     HeaderComponent, 
@@ -24,7 +26,8 @@ import { SharedModule} from '../shared/shared.module';
     HeaderComponent, 
     FooterComponent, 
     SideBarComponent,
-    SharedModule
+    SharedModule,
+    AppRoutingModule
   ]
 })
 export class CoreModule {
