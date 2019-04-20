@@ -5,6 +5,7 @@ import { CopyTaskComponent } from '../copy-task/copy-task.component';
 import { NewTaskListComponent } from '../new-task-list/new-task-list.component';
 import { ConfirmDialogComponent } from 'src/app/shared/confirm-dialog/confirm-dialog.component';
 import { sliceToRight } from '../../anims/router.anims';
+import { timingSafeEqual } from 'crypto';
 
 @Component({
   selector: 'app-task-home',
