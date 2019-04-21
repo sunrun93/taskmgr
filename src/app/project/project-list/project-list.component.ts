@@ -41,12 +41,12 @@ export class ProjectListComponent implements OnInit {
         'id':3,
         'title':'这是一个新项目',
         'desc':'这是一个新项目',
-        'coverImg':'assets/imgs/covers/8.jpg'
+        'coverImg':'assets/imgs/covers/7.jpg'
       }, {
         'id':4,
-        'title':'这是一个新项目',
-        'desc':'这是一个新项目',
-        'coverImg':'assets/imgs/covers/9.jpg'
+        'title':'这是又一个新项目',
+        'desc':'这是又一个新项目',
+        'coverImg':'assets/imgs/covers/8.jpg'
       }];
       this.projects = [...this.projects,...newProject]
       
@@ -57,4 +57,10 @@ export class ProjectListComponent implements OnInit {
     const dialog = this.dialog.open(InviteComponent,{data:{ darkMode: true }});
   }
 
+  deleteProject(project){
+    console.log(project);
+    this.projects = this.projects.filter(x=>{
+      return x.id !== project.id;
+    })
+  }
 }

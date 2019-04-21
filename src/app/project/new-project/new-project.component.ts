@@ -22,5 +22,9 @@ export class NewProjectComponent implements OnInit {
     this.dialogRef.close('i have been closed');
   }
 
+  deleteProject(){
+    
+  }
+
 
 }
