@@ -12,7 +12,6 @@
     border-left: 3px solid red;
 }
 
-
 .avatar{
     overflow: hidden;
     width: 64px;
@@ -32,7 +31,7 @@
     font-size:18px;
 }
 
-dragStart{
-    opacity: 0.5;
-    border: 2px solid red;
+.dragStart{
+    opacity: 0.2;
+    border: 2px dashed red;
 }
