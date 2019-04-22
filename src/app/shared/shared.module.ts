@@ -22,6 +22,7 @@ import {
  } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { DirectiveModule } from '../directive/directive.module';
 @NgModule({
   imports: [
     CommonModule,
@@ -43,7 +44,8 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatRadioModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    DirectiveModule
   ],
   exports:[
     CommonModule,
@@ -65,7 +67,8 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatRadioModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    DirectiveModule
   ],
   declarations: [ConfirmDialogComponent],
   entryComponents:[ConfirmDialogComponent]
