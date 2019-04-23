@@ -4,6 +4,7 @@
   *ngFor="let list of lists" 
   app-droppable 
   [dragEnterClass]="'dragArea'">
+  <app-quick-task (onQuickCreateTask)='onQuickCreate($event)'></app-quick-task>
    <app-task-header 
    [header] = 'list.name' 
    (newTask)="openNewTaskDialog()"

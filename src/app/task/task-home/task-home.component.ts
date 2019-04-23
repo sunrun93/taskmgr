@@ -112,4 +112,8 @@ export class TaskHomeComponent implements OnInit {
     dialog.afterClosed().subscribe(res=>{console.log(res)});
   }
 
+  onQuickCreate(taskDesc: string){
+    console.log(taskDesc);
+  }
+
 }
