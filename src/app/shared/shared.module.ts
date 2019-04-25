@@ -24,6 +24,7 @@ import {
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { DirectiveModule } from '../directive/directive.module';
+import { ImageListSelectComponent } from './image-list-select/image-list-select.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -73,9 +74,10 @@ import { DirectiveModule } from '../directive/directive.module';
     MatSelectModule,
     DirectiveModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ImageListSelectComponent
   ],
-  declarations: [ConfirmDialogComponent],
+  declarations: [ConfirmDialogComponent, ImageListSelectComponent],
   entryComponents:[ConfirmDialogComponent]
 })
 export class SharedModule { }
