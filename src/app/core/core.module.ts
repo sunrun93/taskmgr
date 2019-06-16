@@ -37,7 +37,7 @@ export class CoreModule {
     ds: DomSanitizer
     ){
     if(parent){
-      console.log('CoreModule 已经存在，不再加载。')
+      console.log('Core Module 已经存在，不再加载。')
     }
     loadSVGResource(ir, ds);
   }
