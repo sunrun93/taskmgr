@@ -28,6 +28,13 @@ import { AppRoutingModule } from '../app-routing.module';
     SideBarComponent,
     SharedModule,
     AppRoutingModule
+  ],
+  providers: [
+    {
+      provide: 'BASE_CONFIG', useValue: {
+        url: 'http://localhost:3000'
+      }
+    }
   ]
 })
 export class CoreModule {
