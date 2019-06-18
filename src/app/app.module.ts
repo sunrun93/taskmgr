@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginModule } from './login/login.module';
 import { ProjectModule } from './project/project.module';
 import { TaskModule } from './task/task.module';
+import { QuoteService } from './services/quote.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { TaskModule } from './task/task.module';
   exports: [
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [QuoteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
