@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { promise } from 'protractor';
 
 @Component({
   selector: 'app-register',
@@ -41,4 +42,21 @@ export class RegisterComponent implements OnInit {
 
   }
 
-}
+  private testPromise(){
+    new Promise(()=>{
+      console.log(1);
+    })
+    .then(()=>{
+      return new Promise(()=>{
+        console.log(2);
+      })
+    })
+    .then(()=>{
+      return new Promise(()=>{
+        console.log(2);
+      })
+    })
+    .catch()
+  }
+
+
